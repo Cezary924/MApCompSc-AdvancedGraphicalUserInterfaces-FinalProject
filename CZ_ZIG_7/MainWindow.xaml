@@ -1,0 +1,149 @@
+﻿<Window x:Class="CZ_ZIG_7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CZ_ZIG_7"
+        mc:Ignorable="d"
+        Title="CZ_ZIG_7 - Gra 'Galaktyczny Biznes'" Height="600" Width="800" ResizeMode="NoResize" Icon="/no-copyright-star-icon.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/no-copyright-sky-pic.jpg"/>
+    </Window.Background>
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Label_0_0_0" Content="Gra" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <ComboBox x:Name="ComboBox_0_0_0" HorizontalAlignment="Center" Margin="0,55,0,0" VerticalAlignment="Top" Width="126" SelectedIndex="0">
+            <ComboBoxItem Content="Gracz (1) vs Gracz (2)"/>
+            <ComboBoxItem Content="Gracz (1) vs Komputer (2)"/>
+        </ComboBox>
+        <Button x:Name="Button_0_0_0" Content="Nowa gra" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.641,0.763" Width="125" Height="25" FontSize="16" Background="#FF7F78C7" UseLayoutRounding="False" Click="Button_0_0_0_Click"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="Label_0_1_0" Grid.Row="0" Grid.Column="1" Content="Statystyki" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            <Label x:Name="Label_0_1_1" Content="Gracz 1" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#C77D78" FontStyle="Italic"/>
+            <Label x:Name="Label_0_1_3" Content="Gracz 2" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" FontSize="16" Foreground="#C2C778" FontStyle="Italic"/>
+            <Label x:Name="Label_0_1_2" Content="- KG" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+            <Label x:Name="Label_0_1_4" Content="- KG" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+            <Label x:Name="Label_0_1_5" Content="Stan konta" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+            <Label x:Name="Label_0_1_6" Content="Lista budowli" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Margin="0,-3,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+            <Label x:Name="Label_0_1_7" Content="Lista kart" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Margin="0,-5,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+            <ComboBox x:Name="ComboBox_0_1_0" IsEnabled="False" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="126" SelectedIndex="0"/>
+            <ComboBox x:Name="ComboBox_0_1_2" IsEnabled="False" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="126" SelectedIndex="0"/>
+            <ComboBox x:Name="ComboBox_0_1_1" IsEnabled="False" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="126" SelectedIndex="0"/>
+            <ComboBox x:Name="ComboBox_0_1_3" IsEnabled="False" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="126" SelectedIndex="0"/>
+        </Grid>
+        <Label x:Name="Label_0_2_0" Grid.Column="2" Content="Tura" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="Label_0_2_1" Grid.Row="0" Grid.Column="2" Content="-" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <Button x:Name="Button_0_2_0" Grid.Column="2" Content="Dalej" IsEnabled="False" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.641,0.763" Width="125" Height="25" FontSize="16" Background="#FF7F78C7" UseLayoutRounding="False" Click="Button_0_2_0_Click"/>
+        <Label x:Name="Label_1_0_0" Grid.Row="1" Grid.Column="0" Content="Ruch" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="Label_1_0_1" Grid.Row="1" Grid.Column="0" Content="-" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+
+        <Label x:Name="Label_1_1_0" Grid.Row="1" Grid.Column="1" Content="Gra nierozpoczęta" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24" Foreground="Red" FontWeight="Bold"/>
+        <Label x:Name="Label_1_1_1" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Content="-" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+        <Label x:Name="Label_1_1_2" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Content="-" HorizontalAlignment="Center" Margin="0,125,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+        <Button x:Name="Button_1_1_0" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Content="-" IsEnabled="False" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.641,0.763" Width="252" Height="25" FontSize="16" Background="#FF7F78C7" UseLayoutRounding="False" Click="Button_1_1_0_Click"/>
+        <Button x:Name="Button_1_1_1" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Content="-" IsEnabled="False" HorizontalAlignment="Center" Margin="0,135,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.641,0.763" Width="252" Height="25" FontSize="16" Background="#FF7F78C7" UseLayoutRounding="False" Click="Button_1_1_1_Click"/>
+        <Button x:Name="Button_1_1_2" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Content="-" IsEnabled="False" HorizontalAlignment="Center" Margin="0,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.641,0.763" Width="252" Height="25" FontSize="16" Background="#FF7F78C7" UseLayoutRounding="False" Click="Button_1_1_2_Click"/>
+        <ComboBox x:Name="ComboBox_1_1_0" Visibility="Hidden" IsEnabled="False" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Width="252" SelectedIndex="0"/>
+        <ComboBox x:Name="ComboBox_1_1_1" Visibility="Hidden" IsEnabled="False" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Margin="0,163,0,0" VerticalAlignment="Top" Width="252" SelectedIndex="0"/>
+
+        <Label x:Name="Label_1_2_0" Grid.Row="1" Grid.Column="2" Content="Informacje" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="Label_1_2_1" Grid.Row="1" Grid.Column="2" Content="-" HorizontalAlignment="Center" Margin="0,120,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+        <Label x:Name="Label_2_0_0" Grid.Row="2" Grid.Column="0" Content="Rozkład układu" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="Label_2_0_1" Grid.Row="2" Grid.Column="0" Content="1. -" HorizontalAlignment="Center" Margin="0,65,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+        <Label x:Name="Label_2_0_2" Grid.Row="2" Grid.Column="0" Content="2. -" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+        <Grid Grid.Row="2" Grid.Column="1" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="Label_2_1_0" Content="Plansza" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+            <Grid Grid.Row="2" Grid.Column="1" ShowGridLines="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="Label_2_1_1" Visibility="Hidden" Content="G1" Grid.Row="2" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#C77D78"/>
+                <Label x:Name="Label_2_1_2" Visibility="Hidden" Content="G2" Grid.Row="2" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Top" FontSize="12" Foreground="#C2C778"/>
+                <Label x:Name="Label_2_1_3" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="White" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Układ Słone- czny
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_4" Grid.Column="1" HorizontalAlignment="Center" Margin="-3,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="LightBlue" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Dworzec Orbita lny
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_5" Grid.Column="2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="White" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Układ Księży- cowy
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_6" Grid.Column="3" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="LightGreen" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Szansa
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_7" Grid.Column="4" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="White" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Układ Gwie- zdny
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_8" Grid.Column="5" HorizontalAlignment="Center" Margin="-3,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="LightBlue" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Dworzec Świe- tlny
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_9" Grid.Column="6" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="White" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Układ Głębi- nowy
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_10" Grid.Column="7" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="LightCoral" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Piraci
+                    </TextBlock>
+                </Label>
+                <Label x:Name="Label_2_1_11" Grid.Column="8" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" FontSize="12" Foreground="White" FontStyle="Italic">
+                    <TextBlock TextWrapping="WrapWithOverflow" TextAlignment="Center">
+                          Układ Mglisty
+                    </TextBlock>
+                </Label>
+            </Grid>
+        </Grid>
+        <Label x:Name="Label_2_2_0" Grid.Row="2" Grid.Column="2" Content="Kostki" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="Label_2_2_1" Grid.Row="2" Grid.Column="2" Content="1. -" HorizontalAlignment="Center" Margin="0,65,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+        <Label x:Name="Label_2_2_2" Grid.Row="2" Grid.Column="2" Content="2. -" HorizontalAlignment="Center" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White" FontStyle="Italic"/>
+    </Grid>
+</Window>

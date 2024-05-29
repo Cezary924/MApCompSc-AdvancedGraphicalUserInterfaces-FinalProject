@@ -1,0 +1,6 @@
+D:\OneDrive\Dokumenty\Visual Studio 2022\Source\Repos\CZ_ZIG_7\GameEngine\bin\Debug\GameEngine.dll
+D:\OneDrive\Dokumenty\Visual Studio 2022\Source\Repos\CZ_ZIG_7\GameEngine\bin\Debug\GameEngine.pdb
+D:\OneDrive\Dokumenty\Visual Studio 2022\Source\Repos\CZ_ZIG_7\GameEngine\obj\Debug\GameEngine.csproj.AssemblyReference.cache
+D:\OneDrive\Dokumenty\Visual Studio 2022\Source\Repos\CZ_ZIG_7\GameEngine\obj\Debug\GameEngine.csproj.CoreCompileInputs.cache
+D:\OneDrive\Dokumenty\Visual Studio 2022\Source\Repos\CZ_ZIG_7\GameEngine\obj\Debug\GameEngine.dll
+D:\OneDrive\Dokumenty\Visual Studio 2022\Source\Repos\CZ_ZIG_7\GameEngine\obj\Debug\GameEngine.pdb
